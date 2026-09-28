@@ -1,3 +1,31 @@
+function evaluateScore(scoreInput, nameInput) {
+    if (nameInput === null || nameInput.trim() === "") {
+        return "Invalid score";
+    }
+
+    if (scoreInput === null || scoreInput.trim() === "") {
+        return "Invalid score";
+    }
+
+    let numericScore = Number(scoreInput);
+
+    if (isNaN(numericScore)) {
+        return "Invalid score";
+    }
+
+    if (numericScore <= 0 || numericScore > 100) {
+        return "Invalid score";
+    }
+
+    if (numericScore >= 90 && numericScore <= 100) {
+        return "Excellent";
+    } else if (numericScore >= 75 && numericScore < 90) {
+        return "Passed";
+    } else {
+        return "Failed";
+    }
+}
+
 document.getElementById("startBtn").addEventListener("click", function () {
     // Display the welcome message
     alert("Welcome to the Student Score Evaluator!");
@@ -19,7 +47,10 @@ document.getElementById("startBtn").addEventListener("click", function () {
         return;
     }
 
-    document.getElementById("nameOutput").textContent = studentName;
-    document.getElementById("scoreOutput").textContent = score;
+    let remark = evaluateScore(studentScore, studentName);
+
+    document.getElementById("nameOutput").textContent = studentName || "N/A";
+    document.getElementById("scoreOutput").textContent = studentScore === null || studentScore.trim() === "" ? "N/A" : studentScore;
+    document.getElementById("remarkOutput").textContent = remark;
     document.getElementById("resultBox").classList.remove("hidden");
 });
