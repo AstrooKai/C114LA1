@@ -10,12 +10,38 @@
         <div class="container">
             <h1>Student Score Evaluator</h1>
             <p class="subtitle">Find out how well you did!</p>
-            <button id="startBtn">Start Evaluation</button>
+            <button id="startBtn">Start Your Evaluation</button>
             <div id="resultBox" class="result-box hidden">
                 <h2>Evaluation Result</h2>
                 <p><strong>Student Name:</strong> <span id="nameOutput"></span></p>
                 <p><strong>Final Score:</strong> <span id="scoreOutput"></span></p>
                 <p><strong>Remark:</strong> <span id="remarkOutput"></span></p>
+                <div class="grading-system">
+                    <table class="grading-table">
+                        <thead>
+                            <tr>
+                                <th>Score Range</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>90 - 100</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>75 - 89</td>
+                                <td>Passed</td>
+                            </tr>
+                            <tr>
+                                <td>Below 75</td>
+                                <td>Failed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <button id="newEvaluationBtn" style="display: block; margin: 0 auto;">Evaluate Again</button>
             </div>
         </div>
         <footer>

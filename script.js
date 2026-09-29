@@ -28,7 +28,7 @@ function evaluateScore(scoreInput) {
     }
 }
 
-document.getElementById("startBtn").addEventListener("click", function () {
+function startEvaluation() {
     // Display the welcome message
     alert("Welcome to the Student Score Evaluator!");
 
@@ -102,4 +102,14 @@ document.getElementById("startBtn").addEventListener("click", function () {
     document.getElementById("scoreOutput").innerText = studentScore;
     document.getElementById("remarkOutput").innerText = remark;
     document.getElementById("resultBox").classList.remove("hidden");
+    document.getElementById("startBtn").classList.add("hidden");
+}
+
+// Attach the evaluation function to the start button
+document.getElementById("startBtn").addEventListener("click", startEvaluation);
+
+// Attach a reset function to the new evaluation button
+document.getElementById("newEvaluationBtn").addEventListener("click", function() {
+    document.getElementById("resultBox").classList.add("hidden");
+    document.getElementById("startBtn").classList.remove("hidden");
 });
