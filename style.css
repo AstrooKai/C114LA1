@@ -36,6 +36,7 @@ h1 {
 .subtitle {
     color: #666;
     font-size: clamp(0.85rem, 2vw, 1rem);
+    margin-top: 0;
     margin-bottom: 24px;
 }
 
@@ -66,6 +67,7 @@ button:hover {
 .result-box h2 {
     color: #011748;
     font-size: clamp(1rem, 3vw, 1.3rem);
+    margin-top: 0;
     margin-bottom: 10px;
     text-align: center;
 }
