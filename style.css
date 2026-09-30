@@ -12,12 +12,13 @@ body {
     flex-direction: column;
     align-items: center; /* Horizontally center */
     padding-top: 40px; /* Minimum space at the top */
-    background: linear-gradient(135deg, #011748, #044ac0);
+    background: #1a2423;
+    color: #333;
     box-sizing: border-box;
 }
 
 .container {
-    background: #ffffff;
+    background: #2a3736;
     border-radius: 12px;
     padding: 40px 30px;
     max-width: 480px;
@@ -30,21 +31,22 @@ body {
 }
 
 h1 {
-    color: #011748;
+    color: #3bb6e3;
     font-size: clamp(1.4rem, 5vw, 1.8rem);
     margin-bottom: 6px;
 }
 
 .subtitle {
-    color: #666;
+    color: #fdffff;
     font-size: clamp(0.85rem, 2vw, 1rem);
     margin-top: 0;
     margin-bottom: 24px;
 }
 
 button {
-    background: #011748;
-    color: #fff;
+    background: #4acafc;
+    color: #1a2423;
+    font-weight: bold;
     border: none;
     padding: 12px 28px;
     font-size: clamp(0.95rem, 2.5vw, 1.1rem);
@@ -54,20 +56,20 @@ button {
 }
 
 button:hover {
-    background: #044ac0;
+    background: #3bb6e3;
 }
 
 .result-box {
     margin-top: 28px;
-    background: #ebf2ff;
-    border: 1px solid #011748;
+    background: #1a2423;
+    border: 1px solid #4acafc;
     border-radius: 10px;
     padding: 20px;
     text-align: left;
 }
 
 .result-box h2 {
-    color: #011748;
+    color: #3bb6e3;
     font-size: clamp(1rem, 3vw, 1.3rem);
     margin-top: 0;
     margin-bottom: 10px;
@@ -76,8 +78,12 @@ button:hover {
 
 .result-box p {
     margin: 6px 0;
-    color: #333;
+    color: #3bb6e3;
     font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+}
+
+.result-box span {
+    color: #fdffff;
 }
 
 .hidden {
@@ -88,8 +94,8 @@ footer {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    color: #eef2f6;
+    border-top: 1px solid rgba(74, 202, 252, 0.25);
+    color: #4acafc;
     text-align: center;
     padding: 16px 20px;
     line-height: 1.2;
@@ -114,21 +120,25 @@ footer i {
     width: 100%;
     border-collapse: collapse;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
-    background: #fff;
+    background: #1a2423;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #011748;
+    border: 1px solid #4acafc;
 }
 
 .grading-table th,
 .grading-table td {
     padding: 10px;
     text-align: center;
-    border: 1px solid #c9d7f5;
+    border: 1px solid #bcecfd;
 }
 
 .grading-table th {
-    background-color: #011748;
-    color: white;
+    background-color: #2a3736;
+    color: #3bb6e3;
     font-weight: 600;
+}
+
+.grading-table td {
+    color: #fdffff;
 }
